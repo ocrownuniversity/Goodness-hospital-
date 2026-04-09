@@ -198,60 +198,6 @@ textarea.fi{resize:vertical;min-height:80px}
 /* SALARY SETTINGS IN STAFF TABLE */
 .salary-badge{background:#e6f7ef;color:#1a7a4a;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
 
-
-/* NOTIFICATIONS PAGE */
-.notif-page-item{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border-bottom:1px solid var(--brd);cursor:pointer;transition:background .17s;position:relative}
-.notif-page-item:hover{background:var(--PL)}
-.notif-page-item.unread{background:#f0f7ff;border-left:3px solid var(--P)}
-.notif-page-item.read{opacity:.75}
-.notif-page-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.notif-page-body{flex:1;min-width:0}
-.notif-page-title{font-size:.88rem;font-weight:600;margin-bottom:3px}
-.notif-page-msg{font-size:.79rem;color:var(--mu);line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.notif-page-meta{font-size:.7rem;color:var(--mu);margin-top:4px}
-.notif-unread-dot{width:9px;height:9px;border-radius:50%;background:var(--P);flex-shrink:0;margin-top:5px}
-/* PROFESSIONAL EXTRAS */
-.stat-trend{font-size:.72rem;font-weight:600;display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:20px;margin-top:3px}
-.trend-up{background:#e6f7ef;color:#1a7a4a}
-.trend-dn{background:#fce8e8;color:var(--D)}
-.trend-nt{background:var(--bg);color:var(--mu)}
-/* ACTIVITY FEED */
-.afeed-item{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--brd)}
-.afeed-icon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;flex-shrink:0}
-.afeed-body{flex:1}
-.afeed-text{font-size:.82rem;line-height:1.4}
-.afeed-time{font-size:.7rem;color:var(--mu);margin-top:2px}
-/* QUICK STATS ROW */
-.qstat-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;-webkit-overflow-scrolling:touch}
-.qstat-row::-webkit-scrollbar{display:none}
-.qstat-chip{background:var(--sur);border-radius:var(--rs);padding:10px 14px;flex-shrink:0;box-shadow:var(--sh);border-left:3px solid var(--P);min-width:130px}
-.qstat-chip.green{border-color:var(--A)}.qstat-chip.orange{border-color:var(--W)}.qstat-chip.red{border-color:var(--D)}.qstat-chip.purple{border-color:#5e35b1}
-.qstat-val{font-size:1.2rem;font-weight:700;font-family:'Sora',sans-serif}
-.qstat-lbl{font-size:.72rem;color:var(--mu);margin-top:2px}
-/* SEARCH BAR GLOBAL */
-.global-search{position:relative;margin-bottom:14px}
-.global-search input{padding-left:38px}
-.global-search i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--mu)}
-/* DATE BADGE */
-.date-badge{background:var(--PL);color:var(--P);font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-flex;align-items:center;gap:5px}
-/* ONLINE DOT */
-.online-dot{width:9px;height:9px;border-radius:50%;background:var(--A);display:inline-block;animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-/* WELCOME CARD */
-.welcome-card{background:linear-gradient(135deg,var(--P),var(--PD) 60%,#5e35b1);border-radius:var(--r);padding:18px;color:#fff;margin-bottom:14px;box-shadow:var(--sh)}
-.welcome-card h3{font-size:1.1rem;font-weight:700}
-.welcome-card p{font-size:.82rem;opacity:.87;margin-top:4px}
-.welcome-card .wc-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
-.welcome-card .wc-chip{background:rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-size:.75rem;display:flex;align-items:center;gap:6px}
-/* NOTIFICATION FILTER TABS */
-.ntab-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;-webkit-overflow-scrolling:touch}
-.ntab-row::-webkit-scrollbar{display:none}
-.ntab{background:var(--bg);border:1px solid var(--brd);border-radius:20px;padding:5px 14px;font-size:.78rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:.17s}
-.ntab.active{background:var(--P);color:#fff;border-color:var(--P)}
-/* ENHANCED NOTIF PANEL */
-.notif-panel-footer{padding:10px 14px;border-top:1px solid var(--brd);display:flex;gap:8px}
-.notif-panel-footer button{flex:1;padding:8px;font-size:.78rem;font-weight:600;border-radius:var(--rs);border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
-
 @media(min-width:600px){
   #sidebar{transform:translateX(0)}
   #mainContent{margin-left:var(--sw)}
@@ -304,8 +250,6 @@ textarea.fi{resize:vertical;min-height:80px}
     <div class="ni" id="adminNav" data-mod="admin" onclick="showMod('admin')" style="display:none"><i class="fa fa-user-shield"></i> Admin Panel</div>
     <div class="ni" id="accountantNav" data-mod="accountant" onclick="showMod('accountant')" style="display:none"><i class="fa fa-calculator"></i> Accountant</div>
     <div class="ni" id="attendanceNav" data-mod="attendance" onclick="showMod('attendance')"><i class="fa fa-clock"></i> Attendance</div>
-    <div class="nl">System</div>
-    <div class="ni" data-mod="notifications" onclick="showMod('notifications')" style="position:relative"><i class="fa fa-bell"></i> All Notifications<span id="notifSideCount" class="nbadge">0</span></div>
   </nav>
   <div class="sov" onclick="cSB()"></div>
 
@@ -321,20 +265,7 @@ textarea.fi{resize:vertical;min-height:80px}
 
     <!-- DASHBOARD -->
     <div id="mod-dashboard" class="mod" style="display:block">
-      <!-- Welcome Card -->
-      <div class="welcome-card" id="welcomeCard">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:2px">
-          <div style="width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem"><i class="fa fa-user-nurse"></i></div>
-          <div>
-            <h3>Welcome back, <span id="staffName">—</span>! 👋</h3>
-            <p id="welcomeSubtitle">Loading today's overview…</p>
-          </div>
-        </div>
-        <div class="wc-row">
-          <div class="wc-chip"><span class="online-dot"></span> Online</div>
-          <div class="wc-chip" id="wcDate" style="font-size:.72rem"></div>
-        </div>
-      </div>
+      <div class="mhdr"><div><h2>Welcome, <span id="staffName">—</span></h2><p class="muted">Today's overview</p></div></div>
       <div class="sgrid">
         <div class="scard"><div class="iw ib"><i class="fa fa-users"></i></div><div class="sv2" id="dPat">—</div><div class="sl">Patients</div></div>
         <div class="scard"><div class="iw ig"><i class="fa fa-naira-sign"></i></div><div class="sv2" id="dRev">—</div><div class="sl">Revenue Today</div></div>
@@ -478,26 +409,6 @@ textarea.fi{resize:vertical;min-height:80px}
       </div>
     </div>
 
-
-    <!-- NOTIFICATIONS FULL PAGE -->
-    <div id="mod-notifications" class="mod">
-      <div class="mhdr">
-        <h2><i class="fa fa-bell" style="color:var(--P)"></i> All Notifications</h2>
-        <button class="bsm outline" onclick="markAllRead();loadNotifPage()"><i class="fa fa-check-double"></i> Mark All Read</button>
-      </div>
-      <!-- Filter tabs -->
-      <div class="ntab-row">
-        <div class="ntab active" onclick="filterNotifs('all',this)">All</div>
-        <div class="ntab" onclick="filterNotifs('unread',this)">Unread</div>
-        <div class="ntab" onclick="filterNotifs('rx',this)">💊 Pharmacy</div>
-        <div class="ntab" onclick="filterNotifs('labReq',this)">🔬 Lab</div>
-        <div class="ntab" onclick="filterNotifs('appointment',this)">📅 Appointments</div>
-        <div class="ntab" onclick="filterNotifs('reg',this)">🏥 Registrations</div>
-      </div>
-      <div class="twrap" id="notifPageWrap">
-        <div id="notifPageList"><div class="cr"><i class="fa fa-spinner fa-spin"></i></div></div>
-      </div>
-    </div>
 
     <!-- ACCOUNTANT DASHBOARD -->
     <div id="mod-accountant" class="mod">
@@ -776,14 +687,14 @@ window.doLogout=async()=>{await signOut(auth);toast("Logged out","ok");};
 
 // ── STRICT ROLE PERMISSIONS ────────────────────────────────────────────────
 const ROLE_MODULES={
-  "Super Admin":    ["dashboard","patients","appointments","lab","pharmacy","billing","messages","profile","admin","accountant","attendance","notifications"],
-  "Admin":          ["dashboard","patients","appointments","lab","pharmacy","billing","messages","profile","admin","accountant","attendance","notifications"],
-  "Doctor":         ["dashboard","patients","appointments","messages","profile","attendance","notifications"],
-  "Nurse":          ["dashboard","patients","appointments","messages","profile","attendance","notifications"],
-  "Receptionist":   ["dashboard","patients","appointments","billing","messages","profile","attendance","notifications"],
-  "Lab Technician": ["dashboard","lab","patients","messages","profile","attendance","notifications"],
-  "Pharmacist":     ["dashboard","pharmacy","patients","messages","profile","attendance","notifications"],
-  "Accountant":     ["dashboard","accountant","messages","profile","attendance","notifications"]
+  "Super Admin":    ["dashboard","patients","appointments","lab","pharmacy","billing","messages","profile","admin","accountant","attendance"],
+  "Admin":          ["dashboard","patients","appointments","lab","pharmacy","billing","messages","profile","admin","accountant","attendance"],
+  "Doctor":         ["dashboard","patients","appointments","messages","profile","attendance"],
+  "Nurse":          ["dashboard","patients","appointments","messages","profile","attendance"],
+  "Receptionist":   ["dashboard","patients","appointments","billing","messages","profile","attendance"],
+  "Lab Technician": ["dashboard","lab","patients","messages","profile","attendance"],
+  "Pharmacist":     ["dashboard","pharmacy","patients","messages","profile","attendance"],
+  "Accountant":     ["dashboard","accountant","messages","profile","attendance"]
 };
 const ROLE_ACTIONS={
   "Super Admin":    ["register","dispense","uploadLab","manageStock","viewPatient","book","bill","addRecord","viewRecord","managePayroll","manageStaff"],
@@ -819,7 +730,6 @@ function initApp(){
   if(ge("attendanceNav"))ge("attendanceNav").style.display="flex";
   showMod("dashboard");
   populateMonthSelects();
-  loadWelcomeCard();
   loadDashCards();
   loadDashNotifs();
   startMsgBadge();
@@ -849,7 +759,6 @@ window.showMod=mod=>{
   if(mod==="admin")       {loadAdminStats();loadStaff();}
   if(mod==="accountant")  {loadAccountantDash();}
   if(mod==="attendance")  {loadAttendanceModule();}
-  if(mod==="notifications"){loadNotifPage();}
   if(mod==="dashboard")   { loadDashCards(); loadDashNotifs(); }
 };
 window.tSB=()=>ge("sidebar").classList.toggle("open");
@@ -861,13 +770,12 @@ window.cModal=id=>ge(id).style.display="none";
 async function loadDashNotifs(){
   const el = ge("dashNotifList"); if(!el) return;
   try{
-    // Super Admin / Admin sees ALL notifications; others see only their role
-    const snap = await getDocs(collection(db,"notifications"));
-    const filtered = isAdmin()
-      ? snap.docs
-      : snap.docs.filter(d => d.data().targetRole === SP.role);
+    // No orderBy needed — sort client-side to avoid requiring Firestore index
+    const snap = await getDocs(query(collection(db,"notifications"),
+      where("targetRole","==",SP.role)
+    ));
     // Sort newest first client-side
-    const allDocs = [...filtered].sort((a,b)=>{
+    const allDocs = [...snap.docs].sort((a,b)=>{
       const at=a.data().createdAt?.toDate?.()?.getTime()||0;
       const bt=b.data().createdAt?.toDate?.()?.getTime()||0;
       return bt-at;
@@ -1422,10 +1330,7 @@ let notifOpen = false;
 // Send a notification to target role(s)
 async function sendNotif(targetRoles, type, title, message, patientId=""){
   if(!Array.isArray(targetRoles)) targetRoles=[targetRoles];
-  // Always include Admin and Super Admin for system events
-  const adminRoles = ["Admin","Super Admin"];
-  const merged = [...new Set([...targetRoles, ...adminRoles])];
-  for(const role of merged){
+  for(const role of targetRoles){
     await addDoc(collection(db,"notifications"),{
       targetRole: role,
       type, title, message, patientId,
@@ -1438,56 +1343,29 @@ async function sendNotif(targetRoles, type, title, message, patientId=""){
 }
 
 // Start listening for notifications for this staff member's role
-// Super Admin & Admin receive ALL system notifications
-let notifAllDocs = [];
-
 function startNotifListener(){
   if(!SP||!CU) return;
-
-  // Determine which roles' notifications this user should see
-  // Super Admin and Admin see notifications targeted at "Admin" AND "Super Admin"
-  const rolesToWatch = isAdmin()
-    ? ["Admin","Super Admin","Doctor","Nurse","Receptionist","Lab Technician","Pharmacist","Accountant"]
-    : [SP.role];
-
-  // We use a single listener on "Admin" target for admins, plus their own role
-  // Strategy: listen to all notifications, filter client-side for admins
-  // This avoids composite index issues
-  if(notifUnsub) notifUnsub();
-
+  const myRoles = isAdmin() ? ["Admin","rx","labReq","labRes","referral","appointment","reg","note"] : null;
+  
+  // Simple query with no orderBy — avoids needing Firestore composite index
   notifUnsub = onSnapshot(
-    collection(db,"notifications"),
+    query(collection(db,"notifications"),
+      where("targetRole","==", SP.role)
+    ),
     snap => {
-      // Filter: admins see everything; others see only their role
-      const myDocs = isAdmin()
-        ? snap.docs  // Super Admin / Admin sees ALL notifications
-        : snap.docs.filter(d => d.data().targetRole === SP.role);
-
-      notifAllDocs = myDocs; // store globally for notif page
-
-      const unread = myDocs.filter(d => !d.data().read).length;
+      const unread = snap.docs.filter(d => !d.data().read).length;
       const bell = ge("notifCount");
-      const sideCount = ge("notifSideCount");
       if(bell){
         bell.textContent = unread > 9 ? "9+" : unread;
         bell.style.display = unread > 0 ? "flex" : "none";
       }
-      if(sideCount){
-        sideCount.textContent = unread > 9 ? "9+" : unread;
-        sideCount.style.display = unread > 0 ? "flex" : "none";
-      }
       // Sort newest first client-side
-      const sorted = [...myDocs].sort((a,b)=>{
+      const sorted = [...snap.docs].sort((a,b)=>{
         const at=a.data().createdAt?.toDate?.()?.getTime()||0;
         const bt=b.data().createdAt?.toDate?.()?.getTime()||0;
         return bt-at;
       }).slice(0,30);
       renderNotifList(sorted);
-      // Refresh notif page if open
-      const notifPageEl = ge("notifPageList");
-      if(notifPageEl && ge("mod-notifications") && ge("mod-notifications").style.display!=="none"){
-        renderNotifPage(sorted, window._notifFilter||"all");
-      }
     },
     err => console.log("Notif listener error:", err.message)
   );
@@ -1523,8 +1401,7 @@ function renderNotifList(docs){
       </div>
       ${!n.read?'<span style="width:8px;height:8px;border-radius:50%;background:var(--P);flex-shrink:0;margin-top:4px"></span>':''}
     </div>`;
-  }).join("") + '<button class="notif-markall" onclick="markAllRead()"><i class="fa fa-check-double"></i> Mark All as Read</button>
-      <div class="notif-panel-footer"><button style="background:var(--P);color:#fff" onclick="toggleNotifPanel();showMod('notifications')"><i class="fa fa-list"></i> View All Notifications</button></div>';
+  }).join("") + '<button class="notif-markall" onclick="markAllRead()"><i class="fa fa-check-double"></i> Mark All as Read</button>';
 }
 
 window.toggleNotifPanel = () => {
@@ -1558,81 +1435,12 @@ window.handleNotifClick = async(docId, type, patientId) => {
 };
 
 window.markAllRead = async() => {
-  const snap = await getDocs(collection(db,"notifications"));
-  const toMark = isAdmin()
-    ? snap.docs
-    : snap.docs.filter(d => d.data().targetRole === SP.role);
-  await Promise.all(toMark.map(d => updateDoc(doc(db,"notifications",d.id),{read:true})));
-  loadNotifPage();
+  const snap = await getDocs(query(collection(db,"notifications"),where("targetRole","==",SP.role)));
+  const batch = [];
+  snap.docs.forEach(d => batch.push(updateDoc(doc(db,"notifications",d.id),{read:true})));
+  await Promise.all(batch);
 };
 
-
-// ─── NOTIFICATIONS FULL PAGE ──────────────────────────────────────────────
-window._notifFilter = "all";
-let _notifPageDocs = [];
-
-window.loadNotifPage = async() => {
-  const el = ge("notifPageList"); if(!el) return;
-  el.innerHTML = '<div class="cr"><i class="fa fa-spinner fa-spin"></i></div>';
-  const snap = await getDocs(collection(db,"notifications"));
-  const filtered = isAdmin()
-    ? snap.docs
-    : snap.docs.filter(d => d.data().targetRole === SP.role);
-  _notifPageDocs = [...filtered].sort((a,b)=>{
-    const at=a.data().createdAt?.toDate?.()?.getTime()||0;
-    const bt=b.data().createdAt?.toDate?.()?.getTime()||0;
-    return bt-at;
-  });
-  renderNotifPage(_notifPageDocs, window._notifFilter||"all");
-};
-
-window.filterNotifs = (type, el) => {
-  window._notifFilter = type;
-  document.querySelectorAll(".ntab").forEach(t=>t.classList.remove("active"));
-  if(el) el.classList.add("active");
-  renderNotifPage(_notifPageDocs, type);
-};
-
-function renderNotifPage(docs, filter){
-  const el = ge("notifPageList"); if(!el) return;
-  let list = docs;
-  if(filter === "unread") list = docs.filter(d=>!d.data().read);
-  else if(filter !== "all") list = docs.filter(d=>d.data().type===filter);
-
-  if(!list.length){
-    el.innerHTML='<div class="en" style="padding:28px"><i class="fa fa-bell-slash" style="font-size:2rem;display:block;margin-bottom:10px;opacity:.3"></i>No notifications in this category</div>';
-    return;
-  }
-  const iconMap={rx:{cls:"ni-pharmacy",icon:"fa-pills"},labReq:{cls:"ni-lab",icon:"fa-flask"},labRes:{cls:"ni-doctor",icon:"fa-vial"},appointment:{cls:"ni-appt",icon:"fa-calendar-check"},referral:{cls:"ni-admin",icon:"fa-paper-plane"},reg:{cls:"ni-nurse",icon:"fa-user-plus"},note:{cls:"ni-doctor",icon:"fa-note-medical"},default:{cls:"ni-admin",icon:"fa-bell"}};
-  const unread = list.filter(d=>!d.data().read).length;
-  el.innerHTML = (unread>0?`<div style="padding:10px 15px;background:var(--PL);font-size:.78rem;color:var(--P);font-weight:600"><i class="fa fa-circle" style="font-size:.5rem;margin-right:5px"></i>${unread} unread notification${unread>1?"s":""}</div>`:"") +
-  list.map(d=>{
-    const n=d.data();
-    const ic=iconMap[n.type]||iconMap.default;
-    const roleBadge=`<span style="background:#ede7f6;color:#5e35b1;font-size:.65rem;font-weight:700;padding:1px 7px;border-radius:20px;margin-left:5px">${n.targetRole}</span>`;
-    return`<div class="notif-page-item ${n.read?'read':'unread'}" onclick="handleNotifClick('${d.id}','${n.type}','${n.patientId||""}');loadNotifPage()">
-      <div class="notif-page-icon ${ic.cls}"><i class="fa ${ic.icon}"></i></div>
-      <div class="notif-page-body">
-        <div class="notif-page-title">${n.title||"Notification"}${isAdmin()?roleBadge:""}</div>
-        <div class="notif-page-msg">${n.message||""}</div>
-        <div class="notif-page-meta"><i class="fa fa-user" style="margin-right:4px"></i>${n.from||"System"} · ${n.fromRole||""} · ${fmt(n.createdAt)}</div>
-      </div>
-      ${!n.read?'<div class="notif-unread-dot"></div>':''}
-    </div>`;
-  }).join("") + `<div style="padding:12px;text-align:center"><button class="bsm outline" style="font-size:.76rem" onclick="markAllRead()"><i class="fa fa-check-double"></i> Mark All as Read</button></div>`;
-}
-
-// ─── PROFESSIONAL DASHBOARD EXTRAS ────────────────────────────────────────
-function loadWelcomeCard(){
-  const now = new Date();
-  const hour = now.getHours();
-  const greeting = hour<12 ? "Good morning" : hour<17 ? "Good afternoon" : "Good evening";
-  const dateStr = now.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
-  const el = ge("welcomeSubtitle");
-  if(el) el.textContent = greeting + " — " + dateStr;
-  const wcDate = ge("wcDate");
-  if(wcDate) wcDate.innerHTML = '<i class="fa fa-calendar-days" style="margin-right:4px"></i>' + now.toLocaleDateString("en-GB",{day:"2-digit",month:"short"});
-}
 
 // ─── SUPER ADMIN — EDIT/DELETE STAFF ───────────────────────────────────────
 window.openEditStaff=async(uid)=>{
